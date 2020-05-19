@@ -31,7 +31,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   .state('categories.items', {
     templateUrl: 'src/menuapp/templates/items.template.html',
-    controller: 'ItemsController as item',
+    controller: 'ItemsController as items',
     params: {
       categoryId: null
     }
