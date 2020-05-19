@@ -5,8 +5,14 @@ angular.module('MenuApp')
 .component('categories', {
   templateUrl: 'src/menuapp/templates/categories.template.html',
   bindings: {
-    items: '<'
-  }
+   items: '<'
+ }.component('items', {
+   templateUrl: 'src/menuapp/templates/items.template.html',
+   bindings: {
+     items: '<'
+   }
 });
+
+
 
 })();
