@@ -29,9 +29,15 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     }
   })
 
-  .state('categories.items', {
+  .state('items', {
+    url: '/items',
     templateUrl: 'src/menuapp/templates/items.template.html',
     controller: 'ItemsController as items',
+    resolve: {
+      items: ['MenuDataService', function (MenuDataService) {
+        return MenuDataService.getAllCategories();
+      }]
+    },
     params: {
       categoryId: null
     }
