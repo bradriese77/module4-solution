@@ -1,7 +1,7 @@
 (function () {
 'use strict';
 
-angular.module('MenuApp')
+angular.module('Data')
 .config(RoutesConfig);
 
 RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -30,7 +30,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
 
   .state('items', {
-    url: '/items',
+    url: '/items/{categoryId}',
     templateUrl: 'src/menuapp/templates/items.template.html',
     controller: 'ItemsController as items',
     resolve: {
